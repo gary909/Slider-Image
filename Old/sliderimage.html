@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Image</title>
+    <link rel="stylesheet" href="sliderimage.css">
+    <script src="sliderimage.js"></script>
+</head>
+<body>
+    <br>
+    <div class="text">
+        <h1>Slider Image Test</h1>
+        
+        <p>A quick test to have an image change along with<br>
+        a slider value.</p>
+    </div>
+
+    <img class="image" src="images/icon_Hotel1.png">
+
+    <div class="text">
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+          </div>
+    </div>
+
+      <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+        </script>
+
+
+    
+    
+</body>
+</html>
